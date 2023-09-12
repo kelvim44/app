@@ -1,0 +1,23 @@
+// App
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import TelaPrincipal from './TelaPrincipal';
+import Cursadas from './Cursadas';
+import ACursar from './ACursar';
+
+const Stack = createNativeStackNavigator();
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Main">
+        <Stack.Screen name="Principal" component={TelaPrincipal} />
+        <Stack.Screen name="Cursadas" component={Cursadas} />
+        <Stack.Screen name="ACursar" component={ACursar} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
